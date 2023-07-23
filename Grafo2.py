@@ -1,9 +1,7 @@
 # Eulerian Path is a path in graph that visits every edge exactly once.
-# Eulerian Circuit is an Eulerian Path which starts and ends on the same
-# vertex.
+# Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex.
 # time complexity is O(V+E)
 # space complexity is O(VE)
-
 
 # using dfs for finding eulerian path traversal
 def dfs(u, graph, visited_edge, path=[]):
@@ -13,7 +11,6 @@ def dfs(u, graph, visited_edge, path=[]):
             visited_edge[u][v], visited_edge[v][u] = True, True
             path = dfs(v, graph, visited_edge, path)
     return path
-
 
 # for checking in graph has euler path or circuit
 def check_circuit_or_path(graph, max_node):
